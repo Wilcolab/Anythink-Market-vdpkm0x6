@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import agent from "../agent";
 import { connect } from "react-redux";
-import altimage from '../imgs/placeholder.png'
 import { ITEM_FAVORITED, ITEM_UNFAVORITED } from "../constants/actionTypes";
 
 const mapDispatchToProps = (dispatch) => ({
@@ -37,8 +36,8 @@ const ItemPreview = (props) => {
       id={`item_${item.slug}`}
     >
       <img
-        alt= 'image'
-        src={item.image || altimage}
+        alt="item"
+        src={item.image}
         className="card-img-top item-img"
         style={{ borderRadius: "20px" }}
       />
